@@ -1,0 +1,8 @@
+<% unless sidebar.commenters.blank? -%>
+<h3><%= sidebar.title %></h3>
+<ul>
+<% sidebar.commenters.each do |commenter| -%>
+  <li><%= link_to(commenter.author, commenter.url)%> (<%= commenter.comments %>)</li>
+<% end -%>  
+</ul>
+<% end %>
